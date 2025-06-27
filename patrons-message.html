@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>Contact | Laurels International School</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Contact, Laurels International School" name="keywords">
-    <meta content="Contact Laurels International School." name="description">
-
-    <!-- Favicon -->
-    <link rel="icon" href="img/logo.png" type="image/png">
+    <title>Principal's Message | Laurels International School</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Principal's Message, Laurels International School" name="keywords">
+    <meta content="Read the Principal's message from Laurels International School." name="description">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -29,24 +26,25 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        .header-img { background: #fff; text-align: center; padding: 24px 0 8px 0; }
-        .header-img img { max-width: 320px; width: 100%; }
-        .section-title { 
-            font-size: 2rem; 
-            color: #D24132; 
-            font-weight: 700; 
-            margin-bottom: 1rem; 
-            text-align: center !important; 
+        .header-img {
+            background: url('img/main school building.JPG') center/cover no-repeat;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header-img img {
+            background: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            padding: 12px 24px;
+            max-width: 320px;
             width: 100%;
         }
-        .section-title::before {
-            display: none !important;
+        .section-title { font-size: 2rem; color: #D24132; font-weight: 700; margin-bottom: 1rem; }
+        @media (max-width: 600px) {
+            .header-img { min-height: 120px; }
+            .section-title { font-size: 1.3rem; }
         }
-        .contact-info-box { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 1.5rem 1rem; margin-bottom: 1.5rem; }
-        .contact-info-box i { color: #F9A326 !important; }
-        .contact-info-box h5 { color: #D24132; font-weight: 600; margin-bottom: 1rem; }
-        .form-control, .btn { border-radius: 8px; }
-        @media (max-width: 600px) { .section-title { font-size: 1.3rem; } }
         /* Standard Dropdown Menu Styles for Laurels International School */
         .dropdown-menu {
             display: none;
@@ -78,6 +76,12 @@
         .dropdown-toggle::after {
             margin-left: 5px;
         }
+        
+        /* Remove blue color from active dropdown items */
+        .dropdown-item.active, .dropdown-item:active {
+            background: linear-gradient(45deg, #F9A326, #D24132) !important;
+            color: white !important;
+        }
     </style>
 </head>
 
@@ -94,11 +98,11 @@
             <div class="navbar-nav font-weight-bold mx-auto py-0">
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
+                    <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">About</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="about.html">About Us</a>
                         <a class="dropdown-item" href="directors-message.html">Directors Message</a>
-                        <a class="dropdown-item" href="patrons-message.html">Principal's Message</a>
+                        <a class="dropdown-item active" href="patrons-message.html">Principal's Message</a>
                         <a class="dropdown-item" href="curriculum.html">Curriculum</a>
                         <a class="dropdown-item" href="mandatory-disclosure.html">Mandatory Public Disclosure</a>
                     </div>
@@ -127,60 +131,65 @@
     <!-- Navbar End -->
 
     <!-- Header Section -->
-    <div class="header-img">
-        <img src="img/logo with school name.png" alt="Laurels International School">
-    </div>
-
-    <!-- Contact Info -->
-    <div class="container py-4">
-        <div class="section-title text-center">Contact Information</div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="contact-info-box text-center">
-                    <i class="fa fa-map-marker-alt fa-2x mb-2"></i>
-                    <h5>Address</h5>
-                    <p>Laurels International School,<br>Barara Road<br>Shahabad Markanda 136135</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="contact-info-box text-center">
-                    <i class="fa fa-envelope fa-2x mb-2"></i>
-                    <h5>Email</h5>
-                    <p><a href="mailto:laurelsshahabad@gmail.com">laurelsshahabad@gmail.com</a></p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="contact-info-box text-center">
-                    <i class="fa fa-phone-alt fa-2x mb-2"></i>
-                    <h5>Phone</h5>
-                    <p><a href="tel:+918607606700">+91 8607606700</a><br><a href="tel:+919034169909">+91 9034169909</a></p>
-                </div>
-            </div>
+    <div class="container-fluid py-5" style="background: linear-gradient(135deg, #F9A326, #D24132);">
+        <div class="container text-center">
+            <h1 class="text-white display-4 font-weight-bold">Principal's Message</h1>
+            <p class="text-white lead">Leadership, Vision, and Commitment to Excellence</p>
         </div>
     </div>
 
-    <!-- Contact Form -->
-    <div class="container py-4">
-        <div class="section-title">Send Us a Message</div>
+    <!-- Principal's Message Section -->
+    <div class="container py-5">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <form action="https://formspree.io/f/xrbkovze" method="POST" class="bg-light p-4 rounded shadow-sm">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+            <div class="col-lg-10">
+                <div class="message-content">
+                    <h4 class="mb-4" style="color: #D24132;">Dear Parents, Students, and Well-wishers,</h4>
+                    
+                    <p>It gives me immense pleasure to welcome you to Laurels International School, where we believe in nurturing not just academic excellence, but also character, creativity, and compassion.</p>
+                    
+                    <p>In today's rapidly evolving world, education has transcended beyond traditional classroom learning. At Laurels International School, we understand that every child is unique, with their own potential, dreams, and aspirations. Our mission is to provide an environment where these individual talents can flourish and grow.</p>
+                    
+                    <p>Our school is built on three fundamental pillars:</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-4 mb-3">
+                            <div class="text-center p-3 bg-light rounded">
+                                <i class="fa fa-graduation-cap mb-2" style="font-size: 2rem; color: #F9A326;"></i>
+                                <h6 style="color: #D24132;">Academic Excellence</h6>
+                                <p class="small">Rigorous curriculum designed to challenge and inspire</p>
+                            </div>
                         </div>
-                        <div class="form-group col-md-6">
-                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                        <div class="col-md-4 mb-3">
+                            <div class="text-center p-3 bg-light rounded">
+                                <i class="fa fa-heart mb-2" style="font-size: 2rem; color: #F9A326;"></i>
+                                <h6 style="color: #D24132;">Character Development</h6>
+                                <p class="small">Building strong moral values and ethical principles</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="text-center p-3 bg-light rounded">
+                                <i class="fa fa-globe mb-2" style="font-size: 2rem; color: #F9A326;"></i>
+                                <h6 style="color: #D24132;">Global Perspective</h6>
+                                <p class="small">Preparing students for a connected world</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="phone" placeholder="Your Phone Number" required>
+                    
+                    <p class="mt-4">Our dedicated team of educators works tirelessly to create innovative learning experiences that go beyond textbooks. We emphasize critical thinking, problem-solving, and creativity, preparing our students to face the challenges of the 21st century with confidence and competence.</p>
+                    
+                    <p>At Laurels International School, we believe in the power of collaboration between parents, teachers, and students. This partnership is crucial in creating a supportive environment where children can thrive. We encourage open communication and active participation from all stakeholders in our educational community.</p>
+                    
+                    <p>As we continue to grow and evolve, our commitment to excellence remains unwavering. We are constantly updating our facilities, curriculum, and teaching methodologies to provide the best possible education for our students.</p>
+                    
+                    <p>I invite you to be part of this exciting journey of learning and growth. Together, let us build a brighter future for our children and our community.</p>
+                    
+                    <div class="signature text-right">
+                        <p>Warm regards,<br>
+                        <strong>Mrs. Ritika Madaan</strong><br>
+                        Principal<br>
+                        Laurels International School</p>
                     </div>
-                    <div class="form-group">
-                        <textarea class="form-control" name="message" rows="3" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -223,16 +232,22 @@
             </p>
         </div>
     </footer>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <!-- Footer End -->
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
+    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
-</html>
+</html> 

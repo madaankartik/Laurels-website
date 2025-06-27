@@ -29,24 +29,77 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        .header-img {
-            background: url('img/main school building.JPG') center/cover no-repeat;
-            min-height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .header-img { background: #fff; text-align: center; padding: 24px 0 8px 0; }
+        .header-img img { max-width: 320px; width: 100%; }
+        .section-title { 
+            position: relative; 
+            display: inline-block; 
+            letter-spacing: 1px; 
+            text-transform: uppercase; 
+            color: #D24132; 
+            font-weight: 700; 
+            margin-bottom: 1rem; 
+            text-align: center; 
+            width: 100%; 
         }
-        .header-img img {
-            background: rgba(255,255,255,0.95);
-            border-radius: 12px;
-            padding: 12px 24px;
-            max-width: 320px;
-            width: 100%;
+        .section-title::before { display: none !important; }
+        .about-info-box { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 1.5rem 1rem; margin-bottom: 1.5rem; text-align: center; }
+        .about-info-box i { color: #F9A326 !important; }
+        .about-info-box h5 { color: #D24132; font-weight: 600; margin-bottom: 1rem; }
+        .timeline-item { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #D24132; text-align: center; }
+        .timeline-item h5 { color: #D24132; font-weight: 600; margin-bottom: 1rem; }
+        .timeline-item i { color: #F9A326 !important; }
+        .achievement-card { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 1.5rem; margin-bottom: 1.5rem; text-align: center; }
+        .achievement-card i { font-size: 2.5rem; color: #F9A326; margin-bottom: 1rem; }
+        .team-card { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 1.5rem; margin-bottom: 1.5rem; text-align: center; }
+        .team-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; }
+        .team-card h5 { color: #D24132; font-weight: 600; margin-bottom: 0.5rem; }
+        .team-card p { color: #F9A326; font-weight: 500; margin-bottom: 0; }
+        .timeline-year { background: #D24132; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600; margin-bottom: 1rem; display: inline-block; }
+        .achievement-number { font-size: 2.5rem; font-weight: 700; color: #D24132; margin-bottom: 0.5rem; }
+        .achievement-label { color: #666; font-weight: 500; }
+        
+        /* Standard Dropdown Menu Styles for Laurels International School */
+        .dropdown-menu {
+            display: none;
         }
-        .section-title { font-size: 2rem; color: #D24132; font-weight: 700; margin-bottom: 1rem; }
-        @media (max-width: 600px) {
-            .header-img { min-height: 120px; }
-            .section-title { font-size: 1.3rem; }
+        
+        /* Fix dropdown hover behavior */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        
+        .dropdown-item {
+            padding: 10px 20px;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-item:hover {
+            background: linear-gradient(45deg, #F9A326, #D24132);
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .dropdown-toggle::after {
+            margin-left: 5px;
+        }
+        
+        /* Remove blue color from active dropdown items */
+        .dropdown-item.active, .dropdown-item:active {
+            background: linear-gradient(45deg, #F9A326, #D24132) !important;
+            color: white !important;
+        }
+        
+        @media (max-width: 768px) {
+            .section-title { font-size: 1.5rem; }
+            .achievement-number { font-size: 2rem; }
         }
     </style>
 </head>
@@ -66,17 +119,29 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">About</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="about.html">About Us</a>
-                        <a class="dropdown-item" href="about.html#directors-message">Director's Message</a>
-                        <a class="dropdown-item" href="about.html#principals-message">Principal's Message</a>
-                        <a class="dropdown-item" href="about.html#our-mission">Our Mission</a>
-                        <a class="dropdown-item" href="about.html#aims-objectives">Aims & Objectives</a>
+                        <a class="dropdown-item active" href="about.html">About Us</a>
+                        <a class="dropdown-item" href="directors-message.html">Directors Message</a>
+                        <a class="dropdown-item" href="patrons-message.html">Principal's Message</a>
+                        <a class="dropdown-item" href="curriculum.html">Curriculum</a>
+                        <a class="dropdown-item" href="mandatory-disclosure.html">Mandatory Public Disclosure</a>
                     </div>
                 </div>
-                <a href="classes.html" class="nav-item nav-link">Programs</a>
-                <a href="teachers.html" class="nav-item nav-link">Teachers</a>
-                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-                <a href="news.html" class="nav-item nav-link">News</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Admissions</a>
+                    <div class="dropdown-menu">
+                        <a href="admission.html" class="dropdown-item">Apply Now</a>
+                        <a href="fees.html" class="dropdown-item">Fee Structure</a>
+                        <a href="prospectus.pdf" class="dropdown-item" target="_blank">Download Prospectus</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Kaleidoscope of Activities</a>
+                    <div class="dropdown-menu">
+                        <a href="gallery.html" class="dropdown-item">Gallery</a>
+                        <a href="house-system.html" class="dropdown-item">House System</a>
+                        <a href="sports.html" class="dropdown-item">Sports</a>
+                    </div>
+                </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
             <a href="admission.html" class="btn btn-primary px-4">Apply Now</a>
@@ -89,204 +154,105 @@
         <img src="img/logo with school name.png" alt="Laurels International School">
     </div>
 
-    <!-- About Section -->
+    <!-- School Overview -->
     <div class="container py-4">
-        <div class="section-title text-center">About Laurels International School</div>
-        <div class="row align-items-center">
-            <div class="col-md-6 mb-4 mb-md-0">
-                <img class="img-fluid rounded shadow" src="img/main school building.JPG" alt="School Building">
+        <h2 class="section-title">School Overview</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-info-box">
+                    <i class="fa fa-graduation-cap fa-2x mb-2"></i>
+                    <h5>Academic Excellence</h5>
+                    <p>Laurels International School follows the CBSE curriculum and focuses on holistic development through innovative teaching methods and modern educational practices.</p>
+                </div>
             </div>
             <div class="col-md-6">
-                <p>Laurels International School is a modern, inclusive institution dedicated to nurturing excellence and inspiring futures. We believe in holistic education, blending academics, sports, arts, and values to develop well-rounded individuals ready for the world.</p>
-                <ul class="list-unstyled mt-3">
-                    <li><i class="fa fa-check text-primary mr-2"></i>Modern campus with world-class facilities</li>
-                    <li><i class="fa fa-check text-primary mr-2"></i>Experienced and passionate teachers</li>
-                    <li><i class="fa fa-check text-primary mr-2"></i>Focus on academics, sports, and arts</li>
-                    <li><i class="fa fa-check text-primary mr-2"></i>Safe, inclusive, and vibrant community</li>
-                </ul>
+                <div class="about-info-box">
+                    <i class="fa fa-heart fa-2x mb-2"></i>
+                    <h5>Nurturing Environment</h5>
+                    <p>We provide a safe, inclusive, and supportive environment where every child feels valued and encouraged to explore their potential.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-info-box">
+                    <i class="fa fa-users fa-2x mb-2"></i>
+                    <h5>Experienced Faculty</h5>
+                    <p>Our team of dedicated and qualified teachers is committed to providing quality education and mentoring students towards success.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-info-box">
+                    <i class="fa fa-star fa-2x mb-2"></i>
+                    <h5>Modern Facilities</h5>
+                    <p>State-of-the-art infrastructure including smart classrooms, well-equipped labs, sports facilities, and digital learning resources.</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Quick Facts -->
+    <!-- School Journey Timeline -->
     <div class="container py-4">
-        <div class="section-title text-center">Quick Facts</div>
-        <div class="row text-center">
-            <div class="col-6 col-md-3 mb-3">
-                <div class="bg-light p-3 rounded shadow-sm">
-                    <div class="facility-icon mb-2"><i class="fa fa-users"></i></div>
-                    <div>500+ Students</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 mb-3">
-                <div class="bg-light p-3 rounded shadow-sm">
-                    <div class="facility-icon mb-2"><i class="fa fa-chalkboard-teacher"></i></div>
-                    <div>40+ Teachers</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 mb-3">
-                <div class="bg-light p-3 rounded shadow-sm">
-                    <div class="facility-icon mb-2"><i class="fa fa-bus"></i></div>
-                    <div>Safe Transport</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 mb-3">
-                <div class="bg-light p-3 rounded shadow-sm">
-                    <div class="facility-icon mb-2"><i class="fa fa-futbol"></i></div>
-                    <div>Sports & Arts</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Our Mission Section -->
-    <div id="our-mission" class="container py-5">
-        <div class="section-title text-center">Our Mission</div>
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="bg-light p-5 rounded shadow-sm">
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <h5 class="text-primary mb-3"><i class="fa fa-bullseye mr-2"></i>Mission Statement</h5>
-                            <p>To empower every student to reach their full potential through a balanced, innovative, and values-driven education that fosters academic excellence, character development, and global citizenship.</p>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <h5 class="text-primary mb-3"><i class="fa fa-eye mr-2"></i>Vision Statement</h5>
-                            <p>To be a leading school recognized for academic excellence, character development, and preparing students for global citizenship in the 21st century.</p>
-                        </div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <h5 class="text-primary mb-3"><i class="fa fa-heart mr-2"></i>Core Values</h5>
-                            <div class="row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="text-center">
-                                        <i class="fa fa-star text-warning mb-2" style="font-size: 2rem;"></i>
-                                        <h6>Excellence</h6>
-                                        <p class="small">Striving for the highest standards in everything we do</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="text-center">
-                                        <i class="fa fa-handshake text-warning mb-2" style="font-size: 2rem;"></i>
-                                        <h6>Integrity</h6>
-                                        <p class="small">Building character through honesty and ethical behavior</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="text-center">
-                                        <i class="fa fa-globe text-warning mb-2" style="font-size: 2rem;"></i>
-                                        <h6>Global Citizenship</h6>
-                                        <p class="small">Preparing students for a connected world</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Aims & Objectives Section -->
-    <div id="aims-objectives" class="container py-5">
-        <div class="section-title text-center">Aims & Objectives</div>
+        <h2 class="section-title">Our Journey</h2>
         <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body p-4">
-                        <h5 class="text-primary mb-3"><i class="fa fa-graduation-cap mr-2"></i>Academic Aims</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Provide quality education that meets international standards</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Develop critical thinking and problem-solving skills</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Foster a love for learning and intellectual curiosity</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Prepare students for higher education and future careers</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Integrate technology into the learning process</li>
-                        </ul>
-                    </div>
+            <div class="col-md-6">
+                <div class="timeline-item">
+                    <h5><i class="fa fa-calendar mr-2"></i>Foundation</h5>
+                    <p>Established with a vision to provide quality education and shape the future leaders of tomorrow.</p>
                 </div>
             </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body p-4">
-                        <h5 class="text-primary mb-3"><i class="fa fa-users mr-2"></i>Social & Personal Development</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Build strong character and moral values</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Develop leadership and teamwork skills</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Promote cultural awareness and diversity</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Encourage community service and social responsibility</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Foster emotional intelligence and resilience</li>
-                        </ul>
-                    </div>
+            <div class="col-md-6">
+                <div class="timeline-item">
+                    <h5><i class="fa fa-chart-line mr-2"></i>Growth</h5>
+                    <p>Expanded our facilities and programs to accommodate the growing number of students and their diverse needs.</p>
                 </div>
             </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body p-4">
-                        <h5 class="text-primary mb-3"><i class="fa fa-futbol mr-2"></i>Physical & Creative Development</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Promote physical fitness and healthy lifestyles</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Develop artistic and creative expression</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Encourage participation in sports and activities</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Build confidence through performance and presentation</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Foster appreciation for arts and culture</li>
-                        </ul>
-                    </div>
+            <div class="col-md-6">
+                <div class="timeline-item">
+                    <h5><i class="fa fa-award mr-2"></i>Recognition</h5>
+                    <p>Received numerous accolades for academic excellence, sports achievements, and overall school performance.</p>
                 </div>
             </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body p-4">
-                        <h5 class="text-primary mb-3"><i class="fa fa-lightbulb mr-2"></i>Innovation & Future Readiness</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Develop 21st-century skills and competencies</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Foster innovation and entrepreneurial thinking</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Prepare for global challenges and opportunities</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Build digital literacy and technological fluency</li>
-                            <li class="mb-2"><i class="fa fa-check text-success mr-2"></i>Encourage environmental awareness and sustainability</li>
-                        </ul>
-                    </div>
+            <div class="col-md-6">
+                <div class="timeline-item">
+                    <h5><i class="fa fa-rocket mr-2"></i>Innovation</h5>
+                    <p>Continuously evolving with modern educational practices and technology integration for better learning outcomes.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Footer Start -->
-    <footer class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+    <footer class="container-fluid text-white mt-5 py-5 px-sm-3 px-md-5" style="background: #D24132;">
         <div class="row pt-5">
             <div class="col-lg-4 col-md-6 mb-5">
                 <img src="img/logo.png" alt="Laurels International School Logo" style="max-width: 80px;">
-                <h5 class="mt-3">Laurels International School</h5>
+                <h5 class="mt-3 text-white">Laurels International School</h5>
                 <p>Nurturing Excellence, Inspiring Futures</p>
                 <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-primary btn-circle mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-primary btn-circle mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-primary btn-circle mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-primary btn-circle" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-circle mr-2" href="https://www.facebook.com/kidzeeshahabadmarkanda" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-circle" href="https://www.instagram.com/laurels_shahabad__/" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
-                <h5 class="text-primary mb-4">Quick Links</h5>
+                <h5 class="text-warning mb-4">Quick Links</h5>
                 <ul class="list-unstyled">
                     <li><a class="text-white" href="index.html">Home</a></li>
                     <li><a class="text-white" href="about.html">About</a></li>
-                    <li><a class="text-white" href="classes.html">Programs</a></li>
-                    <li><a class="text-white" href="teachers.html">Teachers</a></li>
+                    <li><a class="text-white" href="admission.html">Admissions</a></li>
                     <li><a class="text-white" href="gallery.html">Gallery</a></li>
-                    <li><a class="text-white" href="news.html">News</a></li>
                     <li><a class="text-white" href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-12 mb-5">
-                <h5 class="text-primary mb-4">Contact Info</h5>
+                <h5 class="text-warning mb-4">Contact Info</h5>
                 <ul class="list-unstyled">
-                    <li><i class="fa fa-map-marker-alt text-primary mr-2"></i> 123 Education Street, City, State 12345</li>
-                    <li><i class="fa fa-envelope text-primary mr-2"></i> info@laurelsinternationalschool.edu</li>
-                    <li><i class="fa fa-phone-alt text-primary mr-2"></i> +1 (555) 123-4567</li>
+                    <li><i class="fa fa-map-marker-alt text-warning mr-2"></i> Laurels International School,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Barara Road<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahabad Markanda 136135</li>
+                    <li><i class="fa fa-envelope text-warning mr-2"></i> <a href="mailto:laurelsshahabad@gmail.com" class="text-white">laurelsshahabad@gmail.com</a></li>
+                    <li><i class="fa fa-phone-alt text-warning mr-2"></i> <a href="tel:+918607606700" class="text-white">+91 8607606700</a></li>
+                    <li><i class="fa fa-phone-alt text-warning mr-2"></i> <a href="tel:+919034169909" class="text-white">+91 9034169909</a></li>
                 </ul>
             </div>
         </div>
-        <div class="container-fluid pt-4" style="border-top: 1px solid rgba(23, 162, 184, .2);">
+        <div class="container-fluid pt-4" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
             <p class="m-0 text-center text-white">
                 &copy; <span id="year"></span> Laurels International School. All Rights Reserved.
             </p>

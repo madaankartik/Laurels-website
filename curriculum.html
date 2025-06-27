@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Curriculum - Laurels International School</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Curriculum, CBSE, Education Programs, Laurels International School" name="keywords">
+    <meta content="Comprehensive curriculum information for Laurels International School" name="description">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo.png" type="image/png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .navbar-brand img {
+            max-height: 60px;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            color: #D24132;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .section-title::before {
+            display: none !important;
+        }
+        .facility-icon {
+            font-size: 2.5rem;
+            color: #F9A326;
+        }
+        .curriculum-card {
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .curriculum-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .grade-badge {
+            background: linear-gradient(45deg, #F9A326, #D24132);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        .subject-icon {
+            font-size: 2rem;
+            color: #F9A326;
+            margin-bottom: 1rem;
+        }
+        /* Standard Dropdown Menu Styles for Laurels International School */
+        .dropdown-menu {
+            display: none;
+        }
+        
+        /* Fix dropdown hover behavior */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        
+        .dropdown-item {
+            padding: 10px 20px;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-item:hover {
+            background: linear-gradient(45deg, #F9A326, #D24132);
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .dropdown-toggle::after {
+            margin-left: 5px;
+        }
+        
+        /* Remove blue color from active dropdown items */
+        .dropdown-item.active, .dropdown-item:active {
+            background: linear-gradient(45deg, #F9A326, #D24132) !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 shadow sticky-top">
+        <a href="index.html" class="navbar-brand font-weight-bold">
+            <img src="img/logo.png" alt="Laurels International School Logo">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav font-weight-bold mx-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">About</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="about.html">About Us</a>
+                        <a class="dropdown-item" href="directors-message.html">Directors Message</a>
+                        <a class="dropdown-item" href="patrons-message.html">Principal's Message</a>
+                        <a class="dropdown-item active" href="curriculum.html">Curriculum</a>
+                        <a class="dropdown-item" href="mandatory-disclosure.html">Mandatory Public Disclosure</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Admissions</a>
+                    <div class="dropdown-menu">
+                        <a href="admission.html" class="dropdown-item">Apply Now</a>
+                        <a href="fees.html" class="dropdown-item">Fee Structure</a>
+                        <a href="prospectus.pdf" class="dropdown-item" target="_blank">Download Prospectus</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Kaleidoscope of Activities</a>
+                    <div class="dropdown-menu">
+                        <a href="gallery.html" class="dropdown-item">Gallery</a>
+                        <a href="house-system.html" class="dropdown-item">House System</a>
+                        <a href="sports.html" class="dropdown-item">Sports</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="admission.html" class="btn btn-primary px-4">Apply Now</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header Section -->
+    <div class="container-fluid py-5" style="background: linear-gradient(135deg, #F9A326, #D24132);">
+        <div class="container text-center">
+            <h1 class="text-white display-4 font-weight-bold">Our Curriculum</h1>
+            <p class="text-white lead">Comprehensive CBSE-based Education for Holistic Development</p>
+        </div>
+    </div>
+
+    <!-- Inspirational Quote Section -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="text-center p-4 bg-light rounded shadow-sm">
+                    <blockquote class="blockquote">
+                        <p class="mb-0 lead" style="color: #D24132; font-style: italic;">
+                            "Don't just teach your children to read…<br>
+                            Teach them to question what they read.<br>
+                            Teach them to question everything."
+                        </p>
+                        <footer class="blockquote-footer mt-3" style="color: #F9A326; font-weight: 600;">
+                            – George Carlin
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Curriculum Overview Section -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div class="section-title">Curriculum Overview</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="bg-light p-5 rounded shadow-sm">
+                    <p class="lead mb-4">At Laurels International School, students are encouraged to develop their knowledge and skills in all aspects of growth: physical, social, emotional, and intellectual. A dynamic curriculum, coupled with a commitment to meet the needs of each child, makes Laurels International School an inspiring place for learning.</p>
+                    
+                    <p class="mb-4">The curriculum prescribed by CBSE is being strictly followed. While implementation and execution of the curriculum our outstanding innovations offer exciting, rich, varied and broad course of study, which help to develop students' skills for all aspects of learning. We work hard to create a sense of excitement and an enthusiasm for lifelong learning and to ensure that all students achieve not only in their exams but in life-skills also.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linguistic Arena Section -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div class="section-title">Linguistic Arena: English, Hindi, Sanskrit and Punjabi</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="bg-light p-5 rounded shadow-sm">
+                    <p class="mb-4">Our language curriculum consists of four linked elements: reading, writing, listening, and speaking. As the children enter primary school with different skill levels, they are all supported and challenged to develop their skills fully. We employ a multi-faceted approach to all areas of language arts.</p>
+                    
+                    <p class="mb-4">To help them to become good readers and writers, the students are immersed in literature. Listening to books read aloud, discussing the stories, and responding to them orally or in a written format are essential elements of our program. A phonics program supports the acquisition of reading and writing skills and sound-symbol relationships are taught in a relevant and meaningful way.</p>
+                    
+                    <div class="alert alert-info">
+                        <strong>Note:</strong> From Grade 6 onwards students will have to opt for Sanskrit or Punjabi as a third language.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Playing with Numbers Section -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div class="section-title">Playing with Numbers</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="bg-light p-5 rounded shadow-sm">
+                    <p class="mb-4">Under the curricular guidelines of CBSE, we use a program which is designed to help all children understand the fundamental ideas of number and operations, data handling, algebra and basic trigonometry. We supplement the program with our own materials when necessary to reinforce students' understanding of important mathematical concepts and skills.</p>
+                    
+                    <p class="mb-4">Students are made to engage in mathematical thinking through experimentation, investigation, questioning, and problem solving. The students are encouraged to be active problem solvers and to use multiple strategies to arrive at solutions. The focus is at increasing competence in learning by doing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coordinating Nature and Surroundings Section -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div class="section-title">Co-ordinating: Nature and Surroundings</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="bg-light p-5 rounded shadow-sm">
+                    <p class="mb-4">Our EVS classes focus on the development of basic scientific process skills by guiding and encouraging the natural curiosity within each student. The students explore the world by making observations, asking questions, hypothesizing, and drawing conclusions through a syllabus which cover a wide variety of topics.</p>
+                    
+                    <p class="mb-4">The students are exposed to scientific language through class discussions and reading science-based age-appropriate literature. Focusing on the idea of community, our EVS classroom program is designed to enhance and stimulate each child's awareness of and interest in the world around him.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- E-Learning Section -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div class="section-title">E-Learning</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="bg-light p-5 rounded shadow-sm">
+                    <p class="mb-4">Laurels International School computer program is integrated with the regular classroom curriculum. In addition to the knowledge of basic computer skills class-wise learning program is adopted.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Character Building Section -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div class="section-title">Character Building</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="bg-light p-5 rounded shadow-sm">
+                    <p class="mb-4">While giving the value education we aim at instilling the core values of honesty, patience, kindness, responsibility, empathy, loyalty, patriotism respect for living things, cooperation, and humility among other values.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nurturing Creativity Section -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div class="section-title">Nurturing Creativity</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="bg-light p-5 rounded shadow-sm">
+                    <p class="mb-4">At Laurels International School, art education seeks to encourage experience and expression. Students have opportunities to balance structure and establish the safe and appropriate use of materials and basic techniques in an atmosphere that encourages individual ideas and interests. Drawing and music enhances the creative abilities of children.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sound Mind in Sound Body Section -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div class="section-title">Sound Mind in Sound Body</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="bg-light p-5 rounded shadow-sm">
+                    <p class="mb-4">The physical education program emphasizes fundamental locomotors, stability, and manipulative movements (running, skipping, throwing, catching, etc.) for primary classes. The senior students are given training in Badminton, basketball, skating, Lawn-tennis, table –tennis, javelin throw, discus throw, shot put, long jump, high-jump, chess etc. to prepare them for state level and national level competitions.</p>
+                    
+                    <p class="mb-4">The teachers strive to develop personal athletic growth and a team spirit rather than focus only on competition.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclusion Programme Section -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div class="section-title">Inclusion Programme</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="bg-light p-5 rounded shadow-sm">
+                    <div class="text-center mb-4">
+                        <blockquote class="blockquote">
+                            <p class="mb-0" style="color: #D24132; font-style: italic;">
+                                'The only thing worse than being blind, is having sight but no vision.'
+                            </p>
+                            <footer class="blockquote-footer mt-2" style="color: #F9A326; font-weight: 600;">
+                                – Helen Keller
+                            </footer>
+                        </blockquote>
+                    </div>
+                    
+                    <p class="mb-4">Laurels International School believes that every student has the potential to access and make progress towards any goal. Inclusion is an attitude we adopt in our interactions with one another. It is about intentionally planning for the success of all students by providing them the right atmosphere to enable them to succeed in the regular classroom and to nurture them to participate independently in society.</p>
+                    
+                    <p class="mb-4">We at Laurels International School follow the philosophy of Inclusive Education and adheres to the CBSE Guidelines for Inclusive Practices. All students, regardless of any challenges they may have, are placed in age- appropriate general education classes and receive appropriate instructions, interventions, and support that enables them to succeed in the core curriculum.</p>
+                    
+                    <p class="mb-4">Early identification of special needs is the key to a child's successful development. The school and classroom operate on the premise that students with disabilities are as fundamentally competent as students without disabilities. The driving principle is to develop a sense of belonging among the students and support them in their efforts to see them through their years at school.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="container-fluid text-white mt-5 py-5 px-sm-3 px-md-5" style="background: #D24132;">
+        <div class="row pt-5">
+            <div class="col-lg-4 col-md-6 mb-5">
+                <img src="img/logo.png" alt="Laurels International School Logo" style="max-width: 80px;">
+                <h5 class="mt-3 text-white">Laurels International School</h5>
+                <p>Nurturing Excellence, Inspiring Futures</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-light btn-circle mr-2" href="https://www.facebook.com/kidzeeshahabadmarkanda" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-circle" href="https://www.instagram.com/laurels_shahabad__/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+                <h5 class="text-warning mb-4">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a class="text-white" href="index.html">Home</a></li>
+                    <li><a class="text-white" href="about.html">About</a></li>
+                    <li><a class="text-white" href="admission.html">Admissions</a></li>
+                    <li><a class="text-white" href="gallery.html">Gallery</a></li>
+                    <li><a class="text-white" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h5 class="text-warning mb-4">Contact Info</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-map-marker-alt text-warning mr-2"></i> Laurels International School,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Barara Road<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahabad Markanda 136135</li>
+                    <li><i class="fa fa-envelope text-warning mr-2"></i> <a href="mailto:laurelsshahabad@gmail.com" class="text-white">laurelsshahabad@gmail.com</a></li>
+                    <li><i class="fa fa-phone-alt text-warning mr-2"></i> <a href="tel:+918607606700" class="text-white">+91 8607606700</a></li>
+                    <li><i class="fa fa-phone-alt text-warning mr-2"></i> <a href="tel:+919034169909" class="text-white">+91 9034169909</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid pt-4" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+            <p class="m-0 text-center text-white">
+                &copy; <span id="year"></span> Laurels International School. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary p-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

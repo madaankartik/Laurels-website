@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Contact | Laurels International School</title>
+    <title>House System | Laurels International School</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Contact, Laurels International School" name="keywords">
-    <meta content="Contact Laurels International School." name="description">
+    <meta content="House System, School Houses, Laurels International School" name="keywords">
+    <meta content="Learn about the House System at Laurels International School." name="description">
 
     <!-- Favicon -->
     <link rel="icon" href="img/logo.png" type="image/png">
@@ -42,11 +42,21 @@
         .section-title::before {
             display: none !important;
         }
-        .contact-info-box { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 1.5rem 1rem; margin-bottom: 1.5rem; }
-        .contact-info-box i { color: #F9A326 !important; }
-        .contact-info-box h5 { color: #D24132; font-weight: 600; margin-bottom: 1rem; }
-        .form-control, .btn { border-radius: 8px; }
+        .house-card { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 1.5rem; margin-bottom: 2rem; }
+        .house-card h5 { 
+            color: #F9A326; 
+            font-weight: 600; 
+            margin-bottom: 1rem; 
+            text-align: center;
+        }
+        .house-badge { padding: 0.5rem 1rem; border-radius: 20px; color: white; font-weight: 600; display: inline-block; margin: 0.5rem 0; }
+        .house-red { background: #D24132; }
+        .house-blue { background: #007bff; }
+        .house-green { background: #28a745; }
+        .house-yellow { background: #ffc107; color: #212529; }
+        .activity-item { background: #f8f9fa; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; }
         @media (max-width: 600px) { .section-title { font-size: 1.3rem; } }
+        
         /* Standard Dropdown Menu Styles for Laurels International School */
         .dropdown-menu {
             display: none;
@@ -70,13 +80,31 @@
         }
         
         .dropdown-item:hover {
-            background: linear-gradient(45deg, #F9A326, #D24132);
-            color: white;
+            background: linear-gradient(45deg, #F9A326, #D24132) !important;
+            color: white !important;
             transform: translateX(5px);
         }
         
         .dropdown-toggle::after {
             margin-left: 5px;
+        }
+        
+        /* Override Bootstrap's blue active state for dropdown items */
+        .dropdown-item.active,
+        .dropdown-item:active {
+            background: linear-gradient(45deg, #F9A326, #D24132) !important;
+            color: white !important;
+        }
+        
+        /* Ensure hover works on non-active items */
+        .dropdown-item:not(.active):hover {
+            background: linear-gradient(45deg, #F9A326, #D24132) !important;
+            color: white !important;
+            transform: translateX(5px);
+        }
+        
+        .nav-item.dropdown.active .nav-link {
+            color: #D24132 !important;
         }
     </style>
 </head>
@@ -115,7 +143,7 @@
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Kaleidoscope of Activities</a>
                     <div class="dropdown-menu">
                         <a href="gallery.html" class="dropdown-item">Gallery</a>
-                        <a href="house-system.html" class="dropdown-item">House System</a>
+                        <a href="house-system.html" class="dropdown-item active">House System</a>
                         <a href="sports.html" class="dropdown-item">Sports</a>
                     </div>
                 </div>
@@ -131,56 +159,59 @@
         <img src="img/logo with school name.png" alt="Laurels International School">
     </div>
 
-    <!-- Contact Info -->
+    <!-- House System Section -->
     <div class="container py-4">
-        <div class="section-title text-center">Contact Information</div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="contact-info-box text-center">
-                    <i class="fa fa-map-marker-alt fa-2x mb-2"></i>
-                    <h5>Address</h5>
-                    <p>Laurels International School,<br>Barara Road<br>Shahabad Markanda 136135</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="contact-info-box text-center">
-                    <i class="fa fa-envelope fa-2x mb-2"></i>
-                    <h5>Email</h5>
-                    <p><a href="mailto:laurelsshahabad@gmail.com">laurelsshahabad@gmail.com</a></p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="contact-info-box text-center">
-                    <i class="fa fa-phone-alt fa-2x mb-2"></i>
-                    <h5>Phone</h5>
-                    <p><a href="tel:+918607606700">+91 8607606700</a><br><a href="tel:+919034169909">+91 9034169909</a></p>
-                </div>
-            </div>
+        <div class="section-title text-center">House System</div>
+        <div class="text-center mb-4">
+            <p class="lead">Fostering Leadership, Teamwork, and Healthy Competition</p>
         </div>
-    </div>
 
-    <!-- Contact Form -->
-    <div class="container py-4">
-        <div class="section-title">Send Us a Message</div>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <form action="https://formspree.io/f/xrbkovze" method="POST" class="bg-light p-4 rounded shadow-sm">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                        </div>
+        <!-- House System Overview -->
+        <div class="house-card">
+            <h5><i class="fa fa-users mr-2"></i>About Our House System</h5>
+            <p>The House System at Laurels International School is designed to promote leadership, teamwork, and healthy competition among students. Each student is assigned to one of four houses upon admission, creating a sense of belonging and school spirit. The houses compete throughout the year in various academic, sports, and cultural activities.</p>
+        </div>
+
+        <!-- The Four Houses -->
+        <div class="house-card">
+            <h5><i class="fa fa-flag mr-2"></i>The Four Houses</h5>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="house-badge house-red">
+                        <i class="fa fa-fire mr-2"></i>Phoenix House
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="phone" placeholder="Your Phone Number" required>
+                    <p><strong>Motto:</strong> "Rise from the Ashes"</p>
+                    <p><strong>Color:</strong> Red</p>
+                    <p><strong>Values:</strong> Courage, Determination, Leadership</p>
+                    <p>Phoenix House represents resilience and the ability to overcome challenges. Students in this house are encouraged to develop leadership skills and show determination in all their endeavors.</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="house-badge house-blue">
+                        <i class="fa fa-water mr-2"></i>Ocean House
                     </div>
-                    <div class="form-group">
-                        <textarea class="form-control" name="message" rows="3" placeholder="Your Message" required></textarea>
+                    <p><strong>Motto:</strong> "Depth and Wisdom"</p>
+                    <p><strong>Color:</strong> Blue</p>
+                    <p><strong>Values:</strong> Wisdom, Depth, Adaptability</p>
+                    <p>Ocean House symbolizes depth of knowledge and adaptability. Students learn to be thoughtful, wise, and flexible in their approach to challenges.</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="house-badge house-green">
+                        <i class="fa fa-leaf mr-2"></i>Forest House
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                </form>
+                    <p><strong>Motto:</strong> "Growth and Harmony"</p>
+                    <p><strong>Color:</strong> Green</p>
+                    <p><strong>Values:</strong> Growth, Harmony, Sustainability</p>
+                    <p>Forest House represents growth, harmony, and environmental consciousness. Students develop a sense of responsibility towards nature and community.</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="house-badge house-yellow">
+                        <i class="fa fa-sun mr-2"></i>Sunrise House
+                    </div>
+                    <p><strong>Motto:</strong> "New Beginnings"</p>
+                    <p><strong>Color:</strong> Yellow</p>
+                    <p><strong>Values:</strong> Optimism, Innovation, Energy</p>
+                    <p>Sunrise House embodies optimism and new beginnings. Students are encouraged to be innovative, energetic, and always look forward to new opportunities.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -235,4 +266,4 @@
     <script src="js/main.js"></script>
 </body>
 
-</html>
+</html> 

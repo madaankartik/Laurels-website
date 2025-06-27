@@ -273,43 +273,36 @@
             transition: all 0.3s ease;
         }
         
+        /* Remove dropdown styles */
         .dropdown-menu {
-            background: var(--primary-white);
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            margin-top: 5px;
-        }
-        
-        .dropdown-item {
-            color: var(--primary-black);
-            padding: 10px 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .dropdown-item:hover {
-            background: var(--primary-orange);
-            color: var(--primary-white);
-        }
-        
-        .dropdown-toggle::after {
-            border-top-color: var(--primary-red);
+            display: none;
         }
         
         /* Fix dropdown hover behavior */
         .dropdown:hover .dropdown-menu {
-            display: block !important;
+            display: block;
         }
         
         .dropdown-menu {
-            margin-top: 0;
-            border-radius: 8px;
+            border: none;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        
+        .dropdown-item {
+            padding: 10px 20px;
+            color: #666;
+            transition: all 0.3s ease;
         }
         
         .dropdown-item:hover {
-            background: var(--primary-orange);
-            color: var(--primary-white);
+            background: linear-gradient(45deg, #F9A326, #D24132);
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .dropdown-toggle::after {
+            margin-left: 5px;
         }
         
     
@@ -321,25 +314,39 @@
     <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 shadow sticky-top">
         <a href="index.html" class="navbar-brand font-weight-bold">
             <img src="img/logo.png" alt="Laurels International School Logo">
-        </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-            <div class="navbar-nav font-weight-bold mx-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <div class="nav-item dropdown">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav font-weight-bold mx-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="about.html">About Us</a>
-                        <a class="dropdown-item" href="about.html#our-mission">Our Mission</a>
-                        <a class="dropdown-item" href="about.html#aims-objectives">Aims & Objectives</a>
+                        <a class="dropdown-item" href="directors-message.html">Directors Message</a>
+                        <a class="dropdown-item" href="patrons-message.html">Principal's Message</a>
+                        <a class="dropdown-item" href="curriculum.html">Curriculum</a>
+                        <a class="dropdown-item" href="mandatory-disclosure.html">Mandatory Public Disclosure</a>
                     </div>
                 </div>
-                <a href="classes.html" class="nav-item nav-link">Programs</a>
-                <a href="teachers.html" class="nav-item nav-link">Teachers</a>
-                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-                <a href="news.html" class="nav-item nav-link">News</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Admissions</a>
+                    <div class="dropdown-menu">
+                        <a href="admission.html" class="dropdown-item">Apply Now</a>
+                        <a href="fees.html" class="dropdown-item">Fee Structure</a>
+                        <a href="prospectus.pdf" class="dropdown-item" target="_blank">Download Prospectus</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Kaleidoscope of Activities</a>
+                    <div class="dropdown-menu">
+                        <a href="gallery.html" class="dropdown-item">Gallery</a>
+                        <a href="house-system.html" class="dropdown-item">House System</a>
+                        <a href="sports.html" class="dropdown-item">Sports</a>
+                    </div>
+                </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
             <a href="admission.html" class="btn btn-primary px-4">Apply Now</a>
@@ -352,7 +359,7 @@
         <div class="hero-overlay text-center">
             <img src="img/logo with school name.png" alt="Laurels International School" style="max-width: 350px; width: 100%; margin-bottom: 24px;">
             <h1 class="display-4 font-weight-bold text-secondary">Laurels International School</h1>
-            <h4 class="text-primary mb-4 mt-2">Nurturing Excellence, Inspiring Futures</h4>
+            <h4 class="mb-4 mt-2" style="color: #D24132;">Nurturing Excellence, Inspiring Futures</h4>
             <p class="lead text-secondary mb-4">A modern, inclusive school dedicated to academic excellence, holistic growth, and global citizenship.</p>
             <a href="admission.html" class="btn btn-primary btn-lg px-5 py-3">Apply Now</a>
         </div>
@@ -364,11 +371,11 @@
         <div class="text-center mb-5">
             <div class="custom-title mb-2">About</div>
             <div class="custom-title">Laurels International School</div>
-        </div>
+                </div>
         <div class="row align-items-center mb-4">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <img class="img-fluid rounded shadow" src="img/main school building.JPG" alt="School Building">
-            </div>
+                        </div>
             <div class="col-lg-6">
                 <p>Laurels International School is committed to providing a nurturing environment where every child can thrive. Our mission is to inspire a love for learning, foster creativity, and empower students to become responsible global citizens.</p>
                 <ul class="list-unstyled mt-3">
@@ -376,9 +383,9 @@
                     <li><i class="fa fa-check text-primary mr-2"></i>Experienced and passionate teachers</li>
                     <li><i class="fa fa-check text-primary mr-2"></i>Focus on academics, sports, and arts</li>
                     <li><i class="fa fa-check text-primary mr-2"></i>Safe, inclusive, and vibrant community</li>
-                </ul>
-            </div>
-        </div>
+                            </ul>
+                        </div>
+                    </div>
         <div class="text-center">
             <a href="about.html" class="btn btn-secondary">Learn More</a>
         </div>
@@ -389,32 +396,32 @@
     <div class="container py-5">
         <div class="text-center mb-5">
             <div class="custom-title">Why Choose Laurels?</div>
-        </div>
+            </div>
         <div class="text-center mb-4">
             <p class="lead">In today's competitive world, education has become a way to bring equality among people and nations. Nowadays, education is not just about making people responsible and independent, but also about preparing them to face the challenges of the modern world, where science plays a major role in everyone's life.</p>
-        </div>
+                        </div>
         <div class="row text-center">
             <div class="col-md-4 mb-4">
                 <div class="p-4 bg-light rounded shadow-sm h-100">
                     <div class="facility-icon mb-3"><i class="flaticon-050-fence"></i></div>
                     <h5>Modern Playground</h5>
                     <p>Safe and engaging play areas for all age groups.</p>
-                </div>
-            </div>
+                            </div>
+                        </div>
             <div class="col-md-4 mb-4">
                 <div class="p-4 bg-light rounded shadow-sm h-100">
                     <div class="facility-icon mb-3"><i class="flaticon-022-drum"></i></div>
                     <h5>Arts & Music</h5>
                     <p>Creative programs to nurture talent and self-expression.</p>
                 </div>
-            </div>
+                        </div>
             <div class="col-md-4 mb-4">
                 <div class="p-4 bg-light rounded shadow-sm h-100">
                     <div class="facility-icon mb-3"><i class="flaticon-017-toy-car"></i></div>
                     <h5>Safe Transportation</h5>
                     <p>Reliable school bus service for all students.</p>
                 </div>
-            </div>
+                        </div>
             <div class="col-md-4 mb-4">
                 <div class="p-4 bg-light rounded shadow-sm h-100">
                     <div class="facility-icon mb-3"><i class="fa fa-laptop"></i></div>
@@ -428,7 +435,7 @@
                     <h5>Well-Stocked Library</h5>
                     <p>Extensive collection of books and learning materials.</p>
                 </div>
-            </div>
+                        </div>
             <div class="col-md-4 mb-4">
                 <div class="p-4 bg-light rounded shadow-sm h-100">
                     <div class="facility-icon mb-3"><i class="fa fa-heartbeat"></i></div>
@@ -440,11 +447,33 @@
     </div>
     <!-- Facilities Section End -->
 
+    <!-- Our Vision and Mission Section Start -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <div class="custom-title">Our Vision and Mission</div>
+            </div>
+            <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="p-5 bg-light rounded shadow-sm h-100">
+                    <h4 class="mb-4 text-center" style="color: #D24132;"><i class="fa fa-eye mr-2" style="color: #F9A326;"></i>Our Vision</h4>
+                    <p class="lead text-center">Our vision is to develop a sustainable, holistic, student-centered learning environment that empowers and inspires our students to be creative, innovative, accomplished leaders.</p>
+                </div>
+                        </div>
+            <div class="col-lg-6 mb-4">
+                <div class="p-5 bg-light rounded shadow-sm h-100">
+                    <h4 class="mb-4 text-center" style="color: #D24132;"><i class="fa fa-bullseye mr-2" style="color: #F9A326;"></i>Our Mission</h4>
+                    <p class="lead text-center">Our mission is to create the leaders of tomorrow. Backed by CBSE curriculum, Laurels International School is dedicated to the moral, spiritual and ethical development of children. We aim to edify them about the worth of honesty, dignity and justice. We are determined to create an atmosphere where values are considered an achievement.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Vision and Mission Section End -->
+
     <!-- School Gallery Section Start -->
     <div class="container py-5">
         <div class="text-center mb-5">
             <div class="custom-title">School Gallery</div>
-        </div>
+            </div>
 
         <!-- Innovative Gallery Grid -->
         <div class="gallery-showcase">
@@ -460,11 +489,11 @@
                                 <span class="stat-item"><i class="fa fa-building"></i> 25+ Classrooms</span>
                                 <span class="stat-item"><i class="fa fa-users"></i> 500+ Students</span>
                                 <span class="stat-item"><i class="fa fa-star"></i> 10+ Years</span>
-                            </div>
+                    </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                    </div>
 
             <!-- Gallery Grid -->
             <div class="row">
@@ -476,7 +505,7 @@
                                 <h5 class="text-white mb-2">Modern Classrooms</h5>
                                 <p class="text-white mb-2">State-of-the-art learning environments</p>
                                 <div class="gallery-badge">Interactive</div>
-                            </div>
+                    </div>
                         </div>
                     </div>
                 </div>
@@ -488,7 +517,7 @@
                                 <h5 class="text-white mb-2">Knowledge Hub</h5>
                                 <p class="text-white mb-2">Extensive collection of books and resources</p>
                                 <div class="gallery-badge">Digital</div>
-                            </div>
+                    </div>
                         </div>
                     </div>
                 </div>
@@ -540,13 +569,11 @@
         <div class="row pt-5">
             <div class="col-lg-4 col-md-6 mb-5">
                 <img src="img/logo.png" alt="Laurels International School Logo" style="max-width: 80px;">
-                <h5 class="mt-3">Laurels International School</h5>
+                <h5 class="mt-3 text-white">Laurels International School</h5>
                 <p>Nurturing Excellence, Inspiring Futures</p>
                 <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-outline-light btn-circle mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-circle mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-circle mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-circle" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-circle mr-2" href="https://www.facebook.com/kidzeeshahabadmarkanda" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-circle" href="https://www.instagram.com/laurels_shahabad__/" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
@@ -554,19 +581,18 @@
                 <ul class="list-unstyled">
                     <li><a class="text-white" href="index.html">Home</a></li>
                     <li><a class="text-white" href="about.html">About</a></li>
-                    <li><a class="text-white" href="classes.html">Programs</a></li>
-                    <li><a class="text-white" href="teachers.html">Teachers</a></li>
+                    <li><a class="text-white" href="admission.html">Admissions</a></li>
                     <li><a class="text-white" href="gallery.html">Gallery</a></li>
-                    <li><a class="text-white" href="news.html">News</a></li>
                     <li><a class="text-white" href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-12 mb-5">
                 <h5 class="text-warning mb-4">Contact Info</h5>
                 <ul class="list-unstyled">
-                    <li><i class="fa fa-map-marker-alt text-warning mr-2"></i> 123 Education Street, City, State 12345</li>
-                    <li><i class="fa fa-envelope text-warning mr-2"></i> info@laurelsinternationalschool.edu</li>
-                    <li><i class="fa fa-phone-alt text-warning mr-2"></i> +1 (555) 123-4567</li>
+                    <li><i class="fa fa-map-marker-alt text-warning mr-2"></i> Laurels International School,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Barara Road<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shahabad Markanda 136135</li>
+                    <li><i class="fa fa-envelope text-warning mr-2"></i> <a href="mailto:laurelsshahabad@gmail.com" class="text-white">laurelsshahabad@gmail.com</a></li>
+                    <li><i class="fa fa-phone-alt text-warning mr-2"></i> <a href="tel:+918607606700" class="text-white">+91 8607606700</a></li>
+                    <li><i class="fa fa-phone-alt text-warning mr-2"></i> <a href="tel:+919034169909" class="text-white">+91 9034169909</a></li>
                 </ul>
             </div>
         </div>

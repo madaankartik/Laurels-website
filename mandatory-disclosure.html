@@ -45,43 +45,6 @@
             .disclosure-table { font-size: 0.9rem; }
             .disclosure-table th, .disclosure-table td { padding: 0.3rem; }
         }
-        /* Standard Dropdown Menu Styles for Laurels International School */
-        .dropdown-menu {
-            display: none;
-        }
-        
-        /* Fix dropdown hover behavior */
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-        
-        .dropdown-menu {
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-        
-        .dropdown-item {
-            padding: 10px 20px;
-            color: #666;
-            transition: all 0.3s ease;
-        }
-        
-        .dropdown-item:hover {
-            background: linear-gradient(45deg, #F9A326, #D24132);
-            color: white;
-            transform: translateX(5px);
-        }
-        
-        .dropdown-toggle::after {
-            margin-left: 5px;
-        }
-        
-        /* Remove blue color from active dropdown items */
-        .dropdown-item.active, .dropdown-item:active {
-            background: linear-gradient(45deg, #F9A326, #D24132) !important;
-            color: white !important;
-        }
     </style>
 </head>
 
@@ -98,11 +61,11 @@
             <div class="navbar-nav font-weight-bold mx-auto py-0">
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">About</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="about.html">About Us</a>
-                        <a class="dropdown-item" href="directors-message.html">Directors Message</a>
-                        <a class="dropdown-item" href="patrons-message.html">Principal's Message</a>
+                        <a class="dropdown-item" href="patrons-message.html">Director's Message</a>
+                        <a class="dropdown-item" href="directors-message.html">Principal's Message</a>
                         <a class="dropdown-item" href="curriculum.html">Curriculum</a>
                         <a class="dropdown-item active" href="mandatory-disclosure.html">Mandatory Public Disclosure</a>
                     </div>
@@ -136,247 +99,257 @@
     </div>
 
     <!-- Mandatory Disclosure Section -->
-    <div class="container py-4">
+    <div class="container py-5">
         <div class="section-title text-center">Mandatory Disclosure</div>
         
-        <!-- School Information -->
-        <div class="disclosure-card">
-            <h5><i class="fa fa-info-circle mr-2"></i>School Information</h5>
-            <div class="disclosure-table">
-                <table>
-                    <tr>
-                        <th>School Name</th>
-                        <td>Laurels International School</td>
-                    </tr>
-                    <tr>
-                        <th>Address</th>
-                        <td>123 Education Street, City, State 12345</td>
-                    </tr>
-                    <tr>
-                        <th>Phone</th>
-                        <td>+1 (555) 123-4567</td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td>info@laurelsinternationalschool.edu</td>
-                    </tr>
-                    <tr>
-                        <th>Website</th>
-                        <td>www.laurelsinternationalschool.edu</td>
-                    </tr>
-                    <tr>
-                        <th>Principal</th>
-                        <td>Dr. Sarah Johnson</td>
-                    </tr>
-                    <tr>
-                        <th>Year of Establishment</th>
-                        <td>2010</td>
-                    </tr>
-                    <tr>
-                        <th>School Type</th>
-                        <td>Private, Co-educational</td>
-                    </tr>
+        <!-- 1. GENERAL INFORMATION -->
+        <div class="disclosure-card mb-5">
+            <h4 style="color: #D24132; margin-bottom: 20px;"><i class="fa fa-info-circle mr-2"></i>1. GENERAL INFORMATION</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th style="width: 40%;">INFORMATION</th>
+                            <th style="width: 60%;">DETAILS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>I. Name of the School</strong></td>
+                            <td>Arbour Grove School, Pehowa</td>
+                        </tr>
+                        <tr>
+                            <td><strong>II. Affiliation No (If Applicable)</strong></td>
+                            <td>531855</td>
+                        </tr>
+                        <tr>
+                            <td><strong>III. School Code (If Applicable)</strong></td>
+                            <td>41852</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IV. Complete address with Pin Code</strong></td>
+                            <td>Siana Saidan, Cheeka Road, Pehowa 136128</td>
+                        </tr>
+                        <tr>
+                            <td><strong>V. Principal Name & Qualification</strong></td>
+                            <td>Mamta Rani (M.A., B.Ed.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>VI. School Email Id</strong></td>
+                            <td>agscheekaroad@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td><strong>VII. Contact Details (Landline / Mobile)</strong></td>
+                            <td>+91 82956-75200, +91 85290-37107</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
 
-        <!-- Recognition & Affiliation -->
-        <div class="disclosure-card">
-            <h5><i class="fa fa-certificate mr-2"></i>Recognition & Affiliation</h5>
-            <div class="disclosure-table">
-                <table>
-                    <tr>
-                        <th>Recognition</th>
-                        <td>State Board of Education</td>
-                    </tr>
-                    <tr>
-                        <th>Affiliation</th>
-                        <td>State Education Department</td>
-                    </tr>
-                    <tr>
-                        <th>Affiliation Number</th>
-                        <td>SCH/12345/2010</td>
-                    </tr>
-                    <tr>
-                        <th>Board Affiliation</th>
-                        <td>State Board</td>
-                    </tr>
-                    <tr>
-                        <th>Last Inspection Date</th>
-                        <td>March 15, 2024</td>
-                    </tr>
+        <!-- 2. DOCUMENTS SECTION -->
+        <div class="disclosure-card mb-5">
+            <h4 style="color: #D24132; margin-bottom: 20px;"><i class="fa fa-file-alt mr-2"></i>2. DOCUMENTS & INFORMATION</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th style="width: 10%;">SL NO.</th>
+                            <th style="width: 60%;">DOCUMENTS/ INFORMATION</th>
+                            <th style="width: 30%;">UPLOAD DOCUMENTS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1.</strong></td>
+                            <td>FEE STRUCTURE OF THE SCHOOL</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>2.</strong></td>
+                            <td>ANNUAL ACADEMIC CALENDAR (NURSERY TO X)</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>3.</strong></td>
+                            <td>LIST OF THE SCHOOL MANAGEMENT COMMITTEE (SMC)</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>4.</strong></td>
+                            <td>LIST OF THE PARENTS TEACHERS ASSOCIATION (PTA) MEMBERS</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>5.</strong></td>
+                            <td>STRENGTH OF STUDENTS</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>6.</strong></td>
+                            <td>LAST THREE-YEAR RESULT OF THE BOARD EXAMINATION</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">Link</a></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
 
-        <!-- Infrastructure -->
-        <div class="disclosure-card">
-            <h5><i class="fa fa-building mr-2"></i>Infrastructure</h5>
-            <div class="disclosure-table">
-                <table>
-                    <tr>
-                        <th>Total Area</th>
-                        <td>5 acres</td>
-                    </tr>
-                    <tr>
-                        <th>Built-up Area</th>
-                        <td>25,000 sq. ft.</td>
-                    </tr>
-                    <tr>
-                        <th>Classrooms</th>
-                        <td>25 (Air-conditioned)</td>
-                    </tr>
-                    <tr>
-                        <th>Laboratories</th>
-                        <td>Science Lab, Computer Lab, Language Lab</td>
-                    </tr>
-                    <tr>
-                        <th>Library</th>
-                        <td>Central Library with 10,000+ books</td>
-                    </tr>
-                    <tr>
-                        <th>Sports Facilities</th>
-                        <td>Playground, Indoor Sports Complex</td>
-                    </tr>
-                    <tr>
-                        <th>Transport</th>
-                        <td>School Bus Service Available</td>
-                    </tr>
+        <!-- 3. DOCUMENTS & INFORMATION -->
+        <div class="disclosure-card mb-5">
+            <h4 style="color: #D24132; margin-bottom: 20px;"><i class="fa fa-folder-open mr-2"></i>3. DOCUMENTS & INFORMATION</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th style="width: 70%;">Documents/Information</th>
+                            <th style="width: 30%;">Upload Documents</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>I.</strong> Copies of affiliation /upgradation letter and recent extension of affiliation. If any</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>II.</strong> Copies of societies/trust/company registration/renewal certificate as applicable</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>III.</strong> Copy of No Objection Certificate(NOC) issued, if applicable by the State Govt/UT</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>IV.</strong> Copies of recognition certificate under RTE Act 2009, and it's renewal if applicable</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>V.</strong> Copy of valid Building Safety Certificate as per the National Building Code</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>VI.</strong> Copy of valid Fire Safety Certificate issued by the competent Authority</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>VII.</strong> Copies of valid Water, Health and Sanitation Certificates</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>VIII.</strong> Copies of Self Certification by the School</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>IX.</strong> Mandatory Disclosure Details</td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
 
-        <!-- Academic Information -->
-        <div class="disclosure-card">
-            <h5><i class="fa fa-graduation-cap mr-2"></i>Academic Information</h5>
-            <div class="disclosure-table">
-                <table>
-                    <tr>
-                        <th>Classes Offered</th>
-                        <td>Pre-K to Grade 8</td>
-                    </tr>
-                    <tr>
-                        <th>Medium of Instruction</th>
-                        <td>English</td>
-                    </tr>
-                    <tr>
-                        <th>Student-Teacher Ratio</th>
-                        <td>15:1</td>
-                    </tr>
-                    <tr>
-                        <th>Total Students</th>
-                        <td>450</td>
-                    </tr>
-                    <tr>
-                        <th>Total Teachers</th>
-                        <td>30 (All Qualified)</td>
-                    </tr>
-                    <tr>
-                        <th>Academic Year</th>
-                        <td>August to May</td>
-                    </tr>
+        <!-- 4. STAFF (TEACHING) -->
+        <div class="disclosure-card mb-5">
+            <h4 style="color: #D24132; margin-bottom: 20px;"><i class="fa fa-users mr-2"></i>4. STAFF (TEACHING)</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th style="width: 40%;">INFORMATION</th>
+                            <th style="width: 60%;">DETAILS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>I. Principal</strong></td>
+                            <td>Mrs. Mamta Rani | MA (Hindi), B.Ed.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>II. Total No. of Teachers</strong></td>
+                            <td>
+                                <strong>PGT:</strong> 05<br>
+                                <strong>TGT:</strong> 14<br>
+                                <strong>PRT:</strong> 08
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>III. Teachers Section Ratio</strong></td>
+                            <td>1.5:1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IV. Special Educator Details</strong></td>
+                            <td>To be appointed</td>
+                        </tr>
+                        <tr>
+                            <td><strong>V. Counsellor and Wellness Teacher</strong></td>
+                            <td>Mrs. Isha Bhardwaj | MA Psychology</td>
+                        </tr>
+                        <tr>
+                            <td><strong>VI. TEACHERS' DETAIL</strong></td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">Link</a></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
 
-        <!-- Fee Structure -->
-        <div class="disclosure-card">
-            <h5><i class="fa fa-dollar-sign mr-2"></i>Fee Structure (Academic Year 2024-25)</h5>
-            <div class="disclosure-table">
-                <table>
-                    <tr>
-                        <th>Grade Level</th>
-                        <th>Tuition Fee (Monthly)</th>
-                        <th>Other Charges (Annual)</th>
-                    </tr>
-                    <tr>
-                        <td>Pre-K to Kindergarten</td>
-                        <td>$500</td>
-                        <td>$800</td>
-                    </tr>
-                    <tr>
-                        <td>Grade 1-3</td>
-                        <td>$600</td>
-                        <td>$900</td>
-                    </tr>
-                    <tr>
-                        <td>Grade 4-6</td>
-                        <td>$700</td>
-                        <td>$1,000</td>
-                    </tr>
-                    <tr>
-                        <td>Grade 7-8</td>
-                        <td>$800</td>
-                        <td>$1,200</td>
-                    </tr>
+        <!-- 5. SCHOOL INFRASTRUCTURE -->
+        <div class="disclosure-card mb-5">
+            <h4 style="color: #D24132; margin-bottom: 20px;"><i class="fa fa-building mr-2"></i>5. SCHOOL INFRASTRUCTURE</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th style="width: 40%;">INFORMATION</th>
+                            <th style="width: 60%;">DETAILS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>I. Total campus area of the school (In Square Mtrs)</strong></td>
+                            <td>8547.59 square mtr.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>II. NUMBER AND SIZE OF CLASS ROOMS (IN SQUARE MTR.)</strong></td>
+                            <td>32 rooms (46.4515 square mtr.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>III. NUMBER OF LARGE LABS INCLUDING COMPUTER LABS (IN SQUARE MTR.)</strong></td>
+                            <td>09(69.6773 square mtr.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IV. Internet Facility (Y/N)</strong></td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>V. No. of Girls Toilets</strong></td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td><strong>VI. No. of Boys Toilets</strong></td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td><strong>VII. Link of YouTube video of the inspection of school covering the infrastructure of the school</strong></td>
+                            <td><a href="#" class="btn btn-sm btn-outline-primary">VIEW</a></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
-            <p class="mt-3"><strong>Note:</strong> Fee structure is subject to revision as per school policy. Scholarships and financial aid available for eligible students.</p>
         </div>
 
-        <!-- Policies -->
-        <div class="disclosure-card">
-            <h5><i class="fa fa-shield-alt mr-2"></i>Important Policies</h5>
-            <ul class="list-unstyled">
-                <li><i class="fa fa-check text-success mr-2"></i>Anti-Bullying Policy</li>
-                <li><i class="fa fa-check text-success mr-2"></i>Child Protection Policy</li>
-                <li><i class="fa fa-check text-success mr-2"></i>Equal Opportunity Policy</li>
-                <li><i class="fa fa-check text-success mr-2"></i>Health & Safety Policy</li>
-                <li><i class="fa fa-check text-success mr-2"></i>Privacy Policy</li>
-                <li><i class="fa fa-check text-success mr-2"></i>Transportation Policy</li>
-            </ul>
-            <p class="mt-3">Complete policy documents available upon request at the school office.</p>
-        </div>
 
-        <!-- Downloads -->
-        <div class="disclosure-card">
-            <h5><i class="fa fa-download mr-2"></i>Downloadable Documents</h5>
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="#" class="download-link"><i class="fa fa-file-pdf mr-2"></i>School Prospectus</a><br>
-                    <a href="#" class="download-link"><i class="fa fa-file-pdf mr-2"></i>Admission Form</a><br>
-                    <a href="#" class="download-link"><i class="fa fa-file-pdf mr-2"></i>Fee Structure</a>
-                </div>
-                <div class="col-md-6">
-                    <a href="#" class="download-link"><i class="fa fa-file-pdf mr-2"></i>School Calendar</a><br>
-                    <a href="#" class="download-link"><i class="fa fa-file-pdf mr-2"></i>Parent Handbook</a><br>
-                    <a href="#" class="download-link"><i class="fa fa-file-pdf mr-2"></i>Academic Calendar</a>
-                </div>
-            </div>
-        </div>
 
-        <!-- Contact for More Information -->
-        <div class="disclosure-card">
-            <h5><i class="fa fa-phone mr-2"></i>Contact for More Information</h5>
-            <p>For any queries regarding mandatory disclosures or school information, please contact:</p>
-            <div class="row">
-                <div class="col-md-6">
-                    <strong>Admissions Office:</strong><br>
-                    Phone: +1 (555) 123-4567<br>
-                    Email: admissions@laurelsinternationalschool.edu
-                </div>
-                <div class="col-md-6">
-                    <strong>Principal's Office:</strong><br>
-                    Phone: +1 (555) 123-4568<br>
-                    Email: principal@laurelsinternationalschool.edu
-                </div>
-            </div>
-        </div>
 
-        <!-- Last Updated -->
-        <div class="text-center mt-4">
-            <p class="text-muted"><strong>Last Updated:</strong> March 15, 2024</p>
-            <p class="text-muted">This information is updated annually or as required by regulations.</p>
-        </div>
     </div>
 
     <!-- Footer Start -->
-    <footer class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+    <footer class="container-fluid text-white mt-5 py-5 px-sm-3 px-md-5" style="background: #D24132;">
         <div class="row pt-5">
             <div class="col-lg-4 col-md-6 mb-5">
                 <img src="img/logo.png" alt="Laurels International School Logo" style="max-width: 80px;">
                 <h5 class="mt-3 text-white">Laurels International School</h5>
-                <p>Nurturing Excellence, Inspiring Futures</p>
+                <p class="footer-slogan">Nurturing Excellence, Inspiring Futures</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-outline-light btn-circle mr-2" href="https://www.facebook.com/kidzeeshahabadmarkanda" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light btn-circle" href="https://www.instagram.com/laurels_shahabad__/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -402,7 +375,7 @@
                 </ul>
             </div>
         </div>
-        <div class="container-fluid pt-4" style="border-top: 1px solid rgba(23, 162, 184, .2);">
+        <div class="container-fluid pt-4" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
             <p class="m-0 text-center text-white">
                 &copy; <span id="year"></span> Laurels International School. All Rights Reserved.
             </p>

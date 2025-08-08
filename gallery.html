@@ -31,63 +31,10 @@
     <style>
         .header-img { background: #fff; text-align: center; padding: 24px 0 8px 0; }
         .header-img img { max-width: 320px; width: 100%; }
-        .section-title { 
-            font-size: 2rem; 
-            color: #D24132; 
-            font-weight: 700; 
-            margin-bottom: 1rem; 
-            text-align: center !important; 
-            width: 100%;
-        }
-        .section-title::before {
-            display: none !important;
-        }
+        .section-title { font-size: 2rem; color: #D24132; font-weight: 700; margin-bottom: 1rem; }
         .gallery-img { border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); margin-bottom: 1.5rem; transition: transform 0.2s; }
         .gallery-img:hover { transform: scale(1.03); }
         @media (max-width: 600px) { .section-title { font-size: 1.3rem; } }
-        
-        /* Standard Dropdown Menu Styles for Laurels International School */
-        .dropdown-menu {
-            display: none;
-        }
-        
-        /* Fix dropdown hover behavior */
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-        
-        .dropdown-menu {
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-        
-        .dropdown-item {
-            padding: 10px 20px;
-            color: #666;
-            transition: all 0.3s ease;
-        }
-        
-        .dropdown-item:hover {
-            background: linear-gradient(45deg, #F9A326, #D24132);
-            color: white;
-            transform: translateX(5px);
-        }
-        
-        .dropdown-toggle::after {
-            margin-left: 5px;
-        }
-        
-        /* Override Bootstrap's blue active state for dropdown items */
-        .dropdown-item.active,
-        .dropdown-item:active {
-            background: linear-gradient(45deg, #F9A326, #D24132) !important;
-            color: white !important;
-        }
-        
-        .nav-item.dropdown.active .nav-link {
-            color: #D24132 !important;
-        }
     </style>
 </head>
 
@@ -107,8 +54,8 @@
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="about.html">About Us</a>
-                        <a class="dropdown-item" href="directors-message.html">Directors Message</a>
-                        <a class="dropdown-item" href="patrons-message.html">Principal's Message</a>
+                        <a class="dropdown-item" href="patrons-message.html">Director's Message</a>
+                        <a class="dropdown-item" href="directors-message.html">Principal's Message</a>
                         <a class="dropdown-item" href="curriculum.html">Curriculum</a>
                         <a class="dropdown-item" href="mandatory-disclosure.html">Mandatory Public Disclosure</a>
                     </div>
@@ -184,7 +131,7 @@
             <div class="col-lg-4 col-md-6 mb-5">
                 <img src="img/logo.png" alt="Laurels International School Logo" style="max-width: 80px;">
                 <h5 class="mt-3 text-white">Laurels International School</h5>
-                <p>Nurturing Excellence, Inspiring Futures</p>
+                <p class="footer-slogan">Nurturing Excellence, Inspiring Futures</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-outline-light btn-circle mr-2" href="https://www.facebook.com/kidzeeshahabadmarkanda" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light btn-circle" href="https://www.instagram.com/laurels_shahabad__/" target="_blank"><i class="fab fa-instagram"></i></a>

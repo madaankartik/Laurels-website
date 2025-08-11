@@ -632,30 +632,7 @@
                 });
             });
             
-            // Ensure Bootstrap dropdowns work properly
-            $('.dropdown-toggle').dropdown();
-            
-            // Additional dropdown handling for better compatibility
-            $('.dropdown-toggle').on('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                const $dropdown = $(this).next('.dropdown-menu');
-                $('.dropdown-menu').not($dropdown).removeClass('show');
-                $dropdown.toggleClass('show');
-            });
-            
-            // Close dropdowns when clicking outside
-            $(document).on('click', function(e) {
-                if (!$(e.target).closest('.dropdown').length) {
-                    $('.dropdown-menu').removeClass('show');
-                }
-            });
-            
-            // Debug dropdown functionality
-            console.log('Dropdown elements found:', $('.dropdown-toggle').length);
-            $('.dropdown-toggle').each(function() {
-                console.log('Dropdown:', $(this).text().trim());
-            });
+
         });
     </script>
     <!-- JavaScript Libraries -->

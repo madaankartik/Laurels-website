@@ -40,13 +40,102 @@
   --primary-red: #D24132;
   --primary-white: #fff;
   --primary-black: #222;
+  
+  /* --- Typography System --- */
+  --font-heading: "Handlee", cursive;
+  --font-content: "Nunito", sans-serif;
 }
 
 body {
   background: var(--primary-white);
   color: var(--primary-black);
-  font-family: "Nunito", sans-serif;
+  font-family: var(--font-content);
   line-height: 1.6;
+}
+
+/* Typography System - Standardize Fonts Across Website */
+h1, h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4,
+.section-title, .custom-title {
+  font-family: var(--font-heading) !important;
+  font-weight: 700;
+}
+
+/* Content Font - All paragraphs, buttons, and content */
+p, .lead, .btn, input, textarea, select, label, 
+.nav-link, .dropdown-item, .navbar-brand,
+.card-title, .card-text, .list-group-item,
+.table, .form-control, .form-label {
+  font-family: var(--font-content) !important;
+}
+
+/* Ensure buttons use content font */
+.btn {
+  font-family: var(--font-content) !important;
+  font-weight: 600;
+}
+
+/* Navigation and menu items */
+.navbar .nav-link,
+.navbar .dropdown-item,
+.navbar .navbar-brand {
+  font-family: var(--font-content) !important;
+}
+
+/* Form elements */
+.form-control, .form-label, .form-text, input, textarea, select {
+  font-family: var(--font-content) !important;
+}
+
+/* Table content */
+.table th, .table td {
+  font-family: var(--font-content) !important;
+}
+
+/* Footer content */
+footer, footer p, footer a, footer h5 {
+  font-family: var(--font-content) !important;
+}
+
+/* Additional typography overrides for consistency */
+.list-unstyled li, .list-group-item {
+  font-family: var(--font-content) !important;
+}
+
+/* Modal and popup content */
+.modal-title, .modal-body, .modal-footer {
+  font-family: var(--font-content) !important;
+}
+
+.modal-title {
+  font-family: var(--font-heading) !important;
+  font-weight: 700;
+}
+
+/* Alert and notification content */
+.alert, .alert-heading {
+  font-family: var(--font-content) !important;
+}
+
+.alert-heading {
+  font-family: var(--font-heading) !important;
+  font-weight: 700;
+}
+
+/* Badge and label content */
+.badge, .label {
+  font-family: var(--font-content) !important;
+}
+
+/* Ensure all heading elements use Handlee */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  font-weight: 700;
+}
+
+/* Ensure all content elements use Nunito */
+p, span, div, a, li, td, th, label, input, textarea, select, button {
+  font-family: var(--font-content) !important;
 }
 
 .navbar, .bg-light {
@@ -565,10 +654,15 @@ img {
 
 /* Remove borders from logo images specifically */
 .header-img img,
-img[src*="logo"] {
+img[src*="logo"],
+img[src*="logo with school name"] {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
 }
 
 /* Header image container styling */
@@ -578,6 +672,7 @@ img[src*="logo"] {
   padding: 24px 0 8px 0;
   border: none;
   outline: none;
+  box-shadow: none;
 }
 
 .header-img img {
@@ -586,8 +681,54 @@ img[src*="logo"] {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
   display: block;
   margin: 0 auto;
+  background: transparent;
+  padding: 0;
+  line-height: 0;
+  font-size: 0;
+}
+
+/* Additional rules to remove any possible borders */
+img[src*="logo with school name.png"] {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
+}
+
+/* Force remove any browser default styling */
+img[src*="logo with school name.png"]::before,
+img[src*="logo with school name.png"]::after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Ensure no focus borders */
+img[src*="logo with school name.png"]:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any potential image border from the image file itself */
+img[src*="logo with school name.png"] {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 svg {

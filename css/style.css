@@ -853,10 +853,13 @@ img[src*="logo"] {
     flex-direction: column;
     gap: 15px;
     text-align: center;
+    padding: 0 15px;
   }
   
   .page-header .school-brand {
     justify-content: center;
+    flex-direction: column;
+    gap: 10px;
   }
   
   .page-header .page-info {
@@ -866,22 +869,95 @@ img[src*="logo"] {
   .page-header .page-info h1 {
     font-size: 1.6rem;
   }
+  
+  .page-header .school-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .page-header .school-info .tagline {
+    font-size: 0.8rem;
+  }
+  
+  .page-header .page-info .page-subtitle {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 576px) {
+  .page-header {
+    padding: 15px 0;
+  }
+  
+  .page-header-content {
+    padding: 0 10px;
+    gap: 12px;
+  }
+  
+  .page-header .school-logo {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .page-header .school-brand {
+    gap: 8px;
+  }
+  
+  .page-header .school-info h2 {
+    font-size: 1.4rem;
+  }
+  
+  .page-header .school-info .tagline {
+    font-size: 0.75rem;
+  }
+  
+  .page-header .page-info h1 {
+    font-size: 1.3rem;
+  }
+  
+  .page-header .page-info .page-subtitle {
+    font-size: 0.75rem;
+  }
+  
+  .page-header .breadcrumb-nav {
+    font-size: 0.7rem;
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding: 12px 0;
+  }
+  
+  .page-header-content {
+    padding: 0 8px;
+    gap: 10px;
+  }
+  
   .page-header .school-logo {
     width: 40px;
     height: 40px;
   }
   
-
-  
   .page-header .school-info h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+  
+  .page-header .school-info .tagline {
+    font-size: 0.7rem;
   }
   
   .page-header .page-info h1 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+  }
+  
+  .page-header .page-info .page-subtitle {
+    font-size: 0.7rem;
+  }
+  
+  .page-header .breadcrumb-nav {
+    font-size: 0.65rem;
+    margin-top: 5px;
   }
 }
 

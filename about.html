@@ -29,22 +29,8 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        .header-img {
-            background: #f8f9fa;
-            min-height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px 0;
-        }
-        .header-img img {
-            max-width: 320px;
-            width: 100%;
-            height: auto;
-        }
         .section-title { font-size: 2rem; color: #D24132; font-weight: 700; margin-bottom: 1rem; }
         @media (max-width: 600px) {
-            .header-img { min-height: 80px; }
             .section-title { font-size: 1.3rem; }
         }
     </style>
@@ -95,9 +81,28 @@
     </nav>
     <!-- Navbar End -->
 
-    <!-- Header Section -->
-    <div class="header-img">
-        <img src="img/logo with school name.png" alt="Laurels International School">
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="page-header-content">
+            <div class="school-brand">
+                <div class="school-logo">
+                    <img src="img/logo.png" alt="Laurels International School">
+                </div>
+                <div class="school-info">
+                    <h2>LAURELS</h2>
+                    <p class="tagline">Nurturing Excellence, Inspiring Futures</p>
+                </div>
+            </div>
+            <div class="page-info">
+                <h1>About Us</h1>
+                <p class="page-subtitle">Discover the story behind Laurels International School</p>
+                <div class="breadcrumb-nav">
+                    <a href="index.html">Home</a>
+                    <span class="separator">›</span>
+                    <span>About</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- About Section -->

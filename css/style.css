@@ -663,11 +663,13 @@ img[src*="logo with school name"] {
   -moz-box-shadow: none !important;
   filter: none !important;
   -webkit-filter: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 /* Header image container styling */
 .header-img {
-  background: #fff;
+  background: transparent !important;
   text-align: center;
   padding: 24px 0 8px 0;
   border: none;
@@ -685,7 +687,7 @@ img[src*="logo with school name"] {
   -moz-box-shadow: none !important;
   display: block;
   margin: 0 auto;
-  background: transparent;
+  background: transparent !important;
   padding: 0;
   line-height: 0;
   font-size: 0;
@@ -701,10 +703,186 @@ img[src*="logo with school name.png"] {
   filter: none !important;
   -webkit-filter: none !important;
   background: transparent !important;
+  background-color: transparent !important;
   padding: 0 !important;
   margin: 0 !important;
   line-height: 0 !important;
   font-size: 0 !important;
+}
+
+/* Remove any gray backgrounds from logo containers */
+.header-img,
+.header-img *,
+[class*="header"] img,
+[class*="logo"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Ensure no background colors are applied to logo images */
+img[src*="logo"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+}
+
+/* New Elegant Page Header Design (for all pages except home) */
+.page-header {
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-red) 100%);
+  padding: 30px 0;
+  position: relative;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-orange) 0%, var(--primary-red) 100%);
+}
+
+.page-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-header .school-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.page-header .school-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-red) 100%);
+  margin: 0 5px;
+}
+
+.page-header .school-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-header .school-info h2 {
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.page-header .school-info .tagline {
+  color: rgba(255,255,255,0.9);
+  font-family: var(--font-content);
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.page-header .page-info {
+  text-align: right;
+}
+
+.page-header .page-info h1 {
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.page-header .page-info .page-subtitle {
+  color: rgba(255,255,255,0.9);
+  font-family: var(--font-content);
+  font-size: 0.9rem;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.page-header .breadcrumb-nav {
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+
+.page-header .breadcrumb-nav a,
+.page-header .breadcrumb-nav span {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.page-header .breadcrumb-nav a:hover {
+  color: rgba(255,255,255,0.8);
+}
+
+.page-header .breadcrumb-nav .separator {
+  color: white;
+  margin: 0 8px;
+}
+
+/* Responsive design for page header */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 20px 0;
+  }
+  
+  .page-header-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .page-header .school-brand {
+    justify-content: center;
+  }
+  
+  .page-header .page-info {
+    text-align: center;
+  }
+  
+  .page-header .page-info h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-header .school-logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+
+  
+  .page-header .school-info h2 {
+    font-size: 1.3rem;
+  }
+  
+  .page-header .page-info h1 {
+    font-size: 1.4rem;
+  }
 }
 
 /* Force remove any browser default styling */

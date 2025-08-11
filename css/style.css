@@ -559,6 +559,35 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  border: none;
+  outline: none;
+}
+
+/* Remove borders from logo images specifically */
+.header-img img,
+img[src*="logo"] {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Header image container styling */
+.header-img {
+  background: #fff;
+  text-align: center;
+  padding: 24px 0 8px 0;
+  border: none;
+  outline: none;
+}
+
+.header-img img {
+  max-width: 320px;
+  width: 100%;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  display: block;
+  margin: 0 auto;
 }
 
 svg {
